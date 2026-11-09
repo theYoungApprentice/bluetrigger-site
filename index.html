@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Trigger — Run an action when a Bluetooth device connects</title>
+  <meta name="description" content="Blue Trigger runs an action — open an app, open a stream, ring the phone, notify or vibrate — when a specific Bluetooth device connects. Per-device actions. Local-first, no tracking." />
+  <meta property="og:title" content="Blue Trigger" />
+  <meta property="og:description" content="Run an action when a specific Bluetooth device connects." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --brand: #2196F3;
+      --brand-light: #BBDEFB;
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666;
+      --card: #f5f8fc;
+      --border: rgba(33,150,243,0.25);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --brand: #64B5F6;
+        --bg: #101417;
+        --fg: #eaeaea;
+        --muted: #9a9a9a;
+        --card: #16202a;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; background: var(--bg); color: var(--fg); line-height: 1.6; }
+    a { color: var(--brand); }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 1.25rem; }
+    .lang { text-align: right; padding: 0.75rem 1.25rem 0; font-size: 0.9rem; }
+    header { text-align: center; padding: 2.5rem 1.25rem; }
+    header img.icon { width: 112px; height: 112px; border-radius: 24px; box-shadow: 0 6px 24px rgba(33,150,243,0.35); }
+    header h1 { font-size: 2.4rem; margin: 1rem 0 0.25rem; letter-spacing: -0.02em; }
+    header p.tagline { font-size: 1.2rem; color: var(--muted); margin: 0 auto; max-width: 560px; }
+    section { padding: 2.25rem 0; }
+    section h2 { font-size: 1.5rem; margin: 0 0 1.25rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.25rem; }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .shots { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .shots figure { margin: 0; width: 260px; max-width: 46%; }
+    .shots img { width: 100%; border-radius: 16px; border: 1px solid var(--border); }
+    .shots figcaption { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 0.4rem; }
+    ol.steps { padding-left: 1.2rem; } ol.steps li { margin: 0.5rem 0; }
+    .note { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.4rem; }
+    .note ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    footer { text-align: center; padding: 2.5rem 1.25rem 3.5rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    code { background: rgba(33,150,243,0.12); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <div class="lang"><strong>EN</strong> · <a href="index.it.html">IT</a></div>
+  <header>
+    <div class="wrap">
+      <img class="icon" src="assets/icon.png" alt="Blue Trigger icon" />
+      <h1>Blue Trigger</h1>
+      <p class="tagline">Run an action when a specific Bluetooth device connects.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>What it does</h2>
+      <p>
+        Blue Trigger watches for your trusted Bluetooth devices. When one of
+        them connects — your headphones, your car, a speaker — it runs the
+        action you chose for <em>that</em> device. Every device can have its
+        own action, and you can change an action without re-selecting the
+        device.
+      </p>
+    </section>
+
+    <section>
+      <h2>Actions</h2>
+      <div class="grid">
+        <div class="card"><h3>Open an app</h3><p>Pick any installed app from a list showing each app's real icon.</p></div>
+        <div class="card"><h3>Open a stream</h3><p>Open a saved stream URL (name + link). Only http/https/rtsp/rtmp links are allowed.</p></div>
+        <div class="card"><h3>Ring the phone</h3><p>Play the ringtone at full volume and vibrate to locate the phone.</p></div>
+        <div class="card"><h3>Notify</h3><p>Post a notification when the trusted device connects.</p></div>
+        <div class="card"><h3>Vibrate</h3><p>A short vibration as a silent confirmation.</p></div>
+        <div class="card"><h3>Per-device rules</h3><p>Each bonded device gets its own action; add, change or remove them anytime.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Screenshots</h2>
+      <div class="shots">
+        <figure>
+          <img src="screenshots/01-summary.png" alt="Device list, each with its own action" />
+          <figcaption>Your devices, each with its own action</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/02-action.png" alt="Action step with the installed-app list" />
+          <figcaption>Choosing the action (and app) for a device</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Set it up</h2>
+      <ol class="steps">
+        <li>Open Blue Trigger and grant the Bluetooth and notification permissions.</li>
+        <li>Tap <strong>Add device</strong> and pick one of your paired Bluetooth devices, then confirm.</li>
+        <li>Choose the action for that device (open app, open stream, ring, notify, vibrate) and tap <strong>Done</strong>.</li>
+        <li>Repeat for other devices if you like — each keeps its own action.</li>
+        <li>Turn on <strong>Enable detection</strong>. Now, when that device connects, its action runs.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Good to know</h2>
+      <div class="note">
+        <ul>
+          <li>A device must be <strong>paired (bonded)</strong> in Android Bluetooth settings first; Blue Trigger only acts on bonded devices.</li>
+          <li>For <em>Open app</em> / <em>Open stream</em>, Android does not let an app open another app by itself from the background: Blue Trigger shows a notification that opens it. To auto-open on Android 14+, grant <em>full-screen notification</em> access from the in-app banner.</li>
+          <li><em>Ring</em>, <em>Notify</em> and <em>Vibrate</em> run immediately, no tap needed.</li>
+          <li>Local-first: no accounts, no ads, no tracking. Device identifiers are not logged or sent anywhere.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a href="https://github.com/theYoungApprentice/btrigger">Source on GitHub</a>
+      <p>&copy; Blue Trigger</p>
+    </div>
+  </footer>
+</body>
+</html>
