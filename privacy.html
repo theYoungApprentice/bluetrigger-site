@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Trigger — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; line-height: 1.55; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    .updated { color: #888; font-size: 0.9rem; }
+    .back { display: inline-block; margin-bottom: 1rem; }
+    .lang { float: right; font-size: 0.9rem; }
+    code { background: rgba(33,150,243,0.12); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+    a { color: #2196F3; }
+    @media (prefers-color-scheme: dark) { a { color: #64B5F6; } }
+  </style>
+</head>
+<body>
+  <span class="lang"><strong>EN</strong> · <a href="privacy.it.html">IT</a></span>
+  <a class="back" href="index.html">&larr; Back to Blue Trigger</a>
+  <h1>Privacy Policy — Blue Trigger</h1>
+  <p class="updated">Last updated: 2026-11-09</p>
+
+  <p>
+    Blue Trigger ("the app") is a local-first Android utility that runs an
+    action when one of your paired Bluetooth devices connects. This policy
+    explains what the app does and does not do with your data.
+  </p>
+
+  <h2>Summary</h2>
+  <p>
+    Blue Trigger does not collect, transmit, or share any personal data. There
+    are no analytics, no ads, no accounts, and no network communication by the
+    app itself.
+  </p>
+
+  <h2>Data the app stores on your device</h2>
+  <ul>
+    <li>
+      <strong>Your device rules.</strong> For each device you configure, the
+      app stores its Bluetooth address and display name, the chosen action,
+      and the action argument (an app package name or a stream URL). Saved
+      stream presets (name + link) are stored too. All of this is kept locally
+      via Android DataStore and never leaves the device.
+    </li>
+  </ul>
+
+  <h2>Bluetooth</h2>
+  <p>
+    The app reads your list of bonded (paired) Bluetooth devices so you can
+    pick one, and observes connection events to run the action you chose. A
+    device address is only used as a local selector; the app acts only on
+    devices that are already bonded. Device identifiers are not logged or
+    transmitted.
+  </p>
+
+  <h2>Installed apps</h2>
+  <p>
+    For the "open app" action, the app queries the list of launchable apps to
+    populate the in-app picker. This list is not stored or transmitted.
+  </p>
+
+  <h2>Opening apps and streams</h2>
+  <p>
+    The "open app" and "open stream" actions post a local notification that,
+    when activated, opens the chosen app or hands the stream URL to your own
+    media player via a standard Android intent. The app does not fetch or
+    proxy stream content itself.
+  </p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code> (and legacy <code>BLUETOOTH</code>/<code>BLUETOOTH_ADMIN</code> on Android 11 and below) — to read bonded devices and observe connections. <code>BLUETOOTH_SCAN</code> is declared with <code>neverForLocation</code>; the app does not request location.</li>
+    <li><code>POST_NOTIFICATIONS</code> — to show the service and action notifications on Android 13+.</li>
+    <li><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_CONNECTED_DEVICE</code> — to run the detection service with a visible notification.</li>
+    <li><code>USE_FULL_SCREEN_INTENT</code> — so the "open app"/"open stream" action can surface automatically where allowed.</li>
+    <li><code>VIBRATE</code> — for the vibrate and ring actions.</li>
+    <li><code>RECEIVE_BOOT_COMPLETED</code> — to resume detection after a reboot if you enabled it.</li>
+  </ul>
+
+  <h2>Data sharing</h2>
+  <p>None. No data is shared with the developer or any third party.</p>
+
+  <h2>Children</h2>
+  <p>The app is a general-purpose utility and is not directed at children.</p>
+
+  <h2>Contact</h2>
+  <p>For questions about this policy, contact:
+    <a href="mailto:lorenz.astroboy@gmail.com">lorenz.astroboy@gmail.com</a></p>
+
+  <h2>Changes</h2>
+  <p>Any future changes to this policy will be published on this page.</p>
+</body>
+</html>

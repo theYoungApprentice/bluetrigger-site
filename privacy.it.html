@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Trigger — Informativa sulla privacy</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; line-height: 1.55; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    .updated { color: #888; font-size: 0.9rem; }
+    .back { display: inline-block; margin-bottom: 1rem; }
+    .lang { float: right; font-size: 0.9rem; }
+    code { background: rgba(33,150,243,0.12); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+    a { color: #2196F3; }
+    @media (prefers-color-scheme: dark) { a { color: #64B5F6; } }
+  </style>
+</head>
+<body>
+  <span class="lang"><a href="privacy.html">EN</a> · <strong>IT</strong></span>
+  <a class="back" href="index.it.html">&larr; Torna a Blue Trigger</a>
+  <h1>Informativa sulla privacy — Blue Trigger</h1>
+  <p class="updated">Ultimo aggiornamento: 2026-11-09</p>
+
+  <p>
+    Blue Trigger ("l'app") è un'utilità Android che funziona in locale ed
+    esegue un'azione quando si connette uno dei tuoi dispositivi Bluetooth
+    associati. Questa informativa spiega cosa fa e cosa non fa l'app con i tuoi
+    dati.
+  </p>
+
+  <h2>In sintesi</h2>
+  <p>
+    Blue Trigger non raccoglie, non trasmette e non condivide alcun dato
+    personale. Nessuna analitica, nessuna pubblicità, nessun account e nessuna
+    comunicazione di rete da parte dell'app.
+  </p>
+
+  <h2>Dati che l'app salva sul dispositivo</h2>
+  <ul>
+    <li>
+      <strong>Le tue regole per dispositivo.</strong> Per ogni dispositivo
+      configurato, l'app salva l'indirizzo Bluetooth e il nome visualizzato,
+      l'azione scelta e il relativo argomento (il nome pacchetto di un'app o
+      l'URL di uno stream). Vengono salvati anche i preset di stream (nome +
+      link). Tutto è conservato in locale tramite Android DataStore e non
+      lascia mai il dispositivo.
+    </li>
+  </ul>
+
+  <h2>Bluetooth</h2>
+  <p>
+    L'app legge l'elenco dei dispositivi Bluetooth associati per permetterti di
+    sceglierne uno e osserva gli eventi di connessione per eseguire l'azione
+    scelta. L'indirizzo del dispositivo è usato solo come selettore locale;
+    l'app agisce solo su dispositivi già associati. Gli identificatori dei
+    dispositivi non vengono registrati né trasmessi.
+  </p>
+
+  <h2>App installate</h2>
+  <p>
+    Per l'azione "apri app", l'app interroga l'elenco delle app avviabili per
+    popolare il selettore interno. Questo elenco non viene salvato né trasmesso.
+  </p>
+
+  <h2>Apertura di app e stream</h2>
+  <p>
+    Le azioni "apri app" e "apri stream" mostrano una notifica locale che, una
+    volta attivata, apre l'app scelta o passa l'URL dello stream al tuo lettore
+    multimediale tramite un intent standard di Android. L'app non scarica né fa
+    da proxy per i contenuti dello stream.
+  </p>
+
+  <h2>Permessi</h2>
+  <ul>
+    <li><code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code> (e i vecchi <code>BLUETOOTH</code>/<code>BLUETOOTH_ADMIN</code> su Android 11 e precedenti) — per leggere i dispositivi associati e osservare le connessioni. <code>BLUETOOTH_SCAN</code> è dichiarato con <code>neverForLocation</code>; l'app non richiede la posizione.</li>
+    <li><code>POST_NOTIFICATIONS</code> — per mostrare le notifiche del servizio e delle azioni su Android 13+.</li>
+    <li><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_CONNECTED_DEVICE</code> — per eseguire il servizio di rilevamento con una notifica visibile.</li>
+    <li><code>USE_FULL_SCREEN_INTENT</code> — per far comparire automaticamente, dove consentito, l'azione "apri app"/"apri stream".</li>
+    <li><code>VIBRATE</code> — per le azioni vibrazione e squillo.</li>
+    <li><code>RECEIVE_BOOT_COMPLETED</code> — per riprendere il rilevamento dopo un riavvio, se lo hai attivato.</li>
+  </ul>
+
+  <h2>Condivisione dei dati</h2>
+  <p>Nessuna. Nessun dato è condiviso con lo sviluppatore o con terze parti.</p>
+
+  <h2>Minori</h2>
+  <p>L'app è un'utilità di uso generale e non è rivolta ai minori.</p>
+
+  <h2>Contatti</h2>
+  <p>Per domande su questa informativa, scrivi a:
+    <a href="mailto:lorenz.astroboy@gmail.com">lorenz.astroboy@gmail.com</a></p>
+
+  <h2>Modifiche</h2>
+  <p>Eventuali modifiche future a questa informativa saranno pubblicate su questa pagina.</p>
+</body>
+</html>
